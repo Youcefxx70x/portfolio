@@ -29,7 +29,7 @@ const Skills = ({lang}) => {
                 <div className="w-4/5 flex items-center">
                     <motion.div className="h-1/3 w-full bg-[#3776AB]"
                      initial={{ width: 0 }}
-                     whileInView={{ width: 350 }}
+                     whileInView={{ width: 200 }}
                      transition={{ duration: 2, ease: "easeInOut" }}
                     ></motion.div>
                 </div>
@@ -39,7 +39,7 @@ const Skills = ({lang}) => {
             <div className="w-4/5 flex items-center">
                     <motion.div className="h-1/3 w-full bg-yellow-300"
                      initial={{ width: 0 }}
-                     whileInView={{ width: 300 }}
+                     whileInView={{ width: 150 }}
                      transition={{ duration: 4, ease: "easeInOut" }}
                     ></motion.div>
                 </div>
@@ -50,7 +50,7 @@ const Skills = ({lang}) => {
             <div className="w-4/5 flex items-center">
                     <motion.div className="h-1/3 w-full bg-blue-300"
                      initial={{ width: 0 }}
-                     whileInView={{ width: 200 }}
+                     whileInView={{ width: 100 }}
                      transition={{ duration: 5, ease: "easeInOut" }}
                     ></motion.div>
                 </div>
