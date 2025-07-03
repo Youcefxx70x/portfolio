@@ -1,4 +1,5 @@
 import profile from "../assets/pic.png"
+import profile2 from "../assets/p.png"
 import {HERO_CONTENT} from "../constants/index"
 import { motion } from "framer-motion"
 import { var_ar,var_fr } from "../constants/index"
@@ -27,11 +28,14 @@ const Hero = ({lang}) => {
     <div className="pb-4 lg:mb-34">
       <div className="flex flex-wrap lg:flex-row-reverse">
         <div className="w-full lg:w-1/2">
-            <div className="flex justify-end ">
-                <motion.img width={650} height={650} src={profile}  className="border border-stone-900 rounded-3xl"
-                initial={{x:100,opacity:0 }}
-                animate={{x:0,opacity:1}}
-                transition={{duration:1,delay:1.5}}/>
+            <div className="flex justify-center sm:justify-end items-center h-full">
+               <motion.img 
+  src={profile2}
+  className="w-40 h-80 sm:w-60 sm:h-150  rounded-full md:w-72 lg:w-80 xl:w-96 border border-stone-900 md:rounded-3xl "
+  initial={{ x: 100, opacity: 0 }}
+  animate={{ x: 0, opacity: 1 }}
+  transition={{ duration: 1, delay: 1.5 }}
+/>
 
             </div>
         </div>
