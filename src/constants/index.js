@@ -9,6 +9,7 @@ import extension from "../assets/my_assets/LT.png"
 import R_FB from "../assets/my_assets/R_FB.png"
 import mines from "../assets/my_assets/mines.png"
 import game from "../assets/my_assets/game.png"
+import matchy from "../assets/my_assets/matchy.png"
 
 export const HERO_CONTENT = `Data Science Graduate and a full stack developer with a knack for crafting robust and scalable web and mobile applications.\n With 3 years of hands-on experience, skillfull in front-end technologies like React js ,React Native ,Bootstrap and Tailwind css, as well as back-end technologies with Django and PostgreSQL.`;
 
@@ -53,6 +54,14 @@ export const EXPERIENCES = [
 ];
 
 export const PROJECTS = [
+  {
+    title: "Matchy",
+    image: matchy,
+    description:
+      "A masters graduation project and a startup..a mobile app dedicated to gamify learning, it's Duolingo but for algerian curiculum",
+    technologies: ["typescript","Expo", "react native", "nativewind" ,"drizzle", "supabase"],
+
+  },
   {
     title: "Blood transmission platform and management system",
     image: ct,
@@ -168,6 +177,13 @@ Fort de 3 ans d'expérience pratique, j'ai perfectionné mes compétences en tec
 
   PROJECTS: [
     {
+      title: "Matchy",
+      image: matchy,
+      description: 
+        "Un projet de fin d'études de master et une startup... une application mobile qui rend l'apprentissage ludique, c’est comme Duolingo mais pour le programme scolaire algérien",
+      technologies: ["TypeScript", "Expo", "React Native", "NativeWind", "Drizzle", "Supabase"]
+    },
+    {
       title: "Plateforme de transmission sanguine et système de gestion",
       image: ct,
       description: "Projet de fin de licence... une plateforme entièrement fonctionnelle avec des fonctionnalités CRUD et une authentification utilisateur.",
@@ -271,6 +287,15 @@ export const var_ar = {
   ],
 
   PROJECTS: [
+    {
+      title: "ماتشي",
+      image: matchy,
+      description: `
+      مشروع تخرج ماجستير وستارت آب.. تطبيق موبايل يهدف إلى تحويل التعلم إلى لعبة، هو مثل دوولينجو لكن للمنهج الجزائري
+
+      `,
+      technologies: ["تايب سكريبت", "إكسبو", "ريأكت نيتيف", "نيتيف ويند", "دريزل", "سوبابيز"]
+  },
     {
       title: "منصة نقل الدم ونظام الإدارة",
       image: ct,
