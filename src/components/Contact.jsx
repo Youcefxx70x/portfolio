@@ -35,9 +35,18 @@ const Contact = ({lang}) => {
             {CONTACT.phoneNo}
         </motion.p>
 
-        <p className="border-b">
+        <p >
             {CONTACT.email}
         </p>
+        <div className="border-b">
+          <button className=" text-md my-5 px-4 py-2  text-center lg:text-2xl rounded-lg bg-amber-50 lg:px-8 lg:py-4 text-black cursor-pointer capitalize hover:bg-amber-100 font-bold transition">
+                    <a href="/CV.pdf"
+                            download
+                           >download my resume</a>
+          </button>
+  
+        </div>
+
       </motion.div>
     </div>
   )

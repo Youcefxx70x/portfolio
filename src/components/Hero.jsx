@@ -1,4 +1,4 @@
-import profile from "../assets/pic.png"
+
 import profile2 from "../assets/p.png"
 import {HERO_CONTENT} from "../constants/index"
 import { motion } from "framer-motion"
@@ -30,12 +30,12 @@ const Hero = ({lang}) => {
         <div className="w-full lg:w-1/2">
             <div className="flex justify-center sm:justify-end items-center h-full">
                <motion.img 
-  src={profile2}
-  className="w-40 h-80 sm:w-60 sm:h-150  rounded-full md:w-72 lg:w-80 xl:w-96 border border-stone-900 md:rounded-3xl "
-  initial={{ x: 100, opacity: 0 }}
-  animate={{ x: 0, opacity: 1 }}
-  transition={{ duration: 1, delay: 1.5 }}
-/>
+                src={profile2}
+                className="w-40 h-60 sm:w-60 sm:h-80 lg:h-120  rounded-full md:w-72 lg:w-80 border border-stone-900 md:rounded-3xl "
+                initial={{ x: 100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 1.5 }}
+              />
 
             </div>
         </div>
