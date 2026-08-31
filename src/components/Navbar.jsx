@@ -93,12 +93,11 @@ const Navbar = ({ lang, setLang, onOpenCommand }) => {
           /* EXPANDED FULL PILL (Open by default) */
           <motion.nav
             key="expanded-navbar"
-            layout
-            initial={{ opacity: 0, y: -20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -20, scale: 0.95 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            className="pointer-events-auto flex items-center justify-between gap-2 sm:gap-3 md:gap-5 rounded-full border border-stone-800/90 bg-neutral-950/85 px-3 sm:px-5 py-2 backdrop-blur-md shadow-2xl shadow-black/90 max-w-[96vw] sm:max-w-max"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="pointer-events-auto flex items-center justify-between gap-1.5 xs:gap-2 sm:gap-3 md:gap-4 rounded-full border border-stone-800/90 bg-neutral-950/90 px-2.5 sm:px-4 py-1.5 sm:py-2 backdrop-blur-md shadow-2xl shadow-black/90 max-w-[calc(100vw-1rem)] sm:max-w-max"
           >
             {/* 1. Openable / Closable Language Switcher */}
             <div className="relative flex-shrink-0" ref={langMenuRef}>
@@ -107,21 +106,21 @@ const Navbar = ({ lang, setLang, onOpenCommand }) => {
                 type="button"
                 aria-label="Toggle language menu"
                 aria-expanded={isLangOpen}
-                className="cursor-pointer flex items-center gap-1.5 rounded-full px-2 py-1 bg-stone-900/60 border border-stone-800/80 hover:border-stone-700 hover:bg-stone-900 text-stone-300 text-xs transition-all focus:outline-none"
+                className="cursor-pointer flex items-center gap-1 sm:gap-1.5 rounded-full px-1.5 sm:px-2 py-1 bg-stone-900/60 border border-stone-800/80 hover:border-stone-700 hover:bg-stone-900 text-stone-300 text-xs transition-all focus:outline-none"
               >
                 <ReactCountryFlag
                   countryCode={lang}
                   svg
                   style={{
-                    width: "1.25em",
-                    height: "1.25em",
+                    width: "1.15em",
+                    height: "1.15em",
                     borderRadius: "9999px",
                     display: "block",
                   }}
                 />
                 <FaChevronDown
                   className={cn(
-                    "text-[8px] text-stone-400 transition-transform duration-200",
+                    "text-[7px] sm:text-[8px] text-stone-400 transition-transform duration-200",
                     isLangOpen && "rotate-180",
                   )}
                 />
@@ -135,7 +134,10 @@ const Navbar = ({ lang, setLang, onOpenCommand }) => {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 8, scale: 0.95 }}
                     transition={{ duration: 0.15, ease: "easeOut" }}
-                    className="absolute top-full mt-2 left-0 min-w-[120px] rounded-xl border border-stone-800/90 bg-neutral-950/95 backdrop-blur-md p-1.5 shadow-2xl shadow-black/90 z-50 flex flex-col gap-1"
+                    className={cn(
+                      "absolute top-full mt-2 min-w-[130px] rounded-xl border border-stone-800/90 bg-neutral-950/95 backdrop-blur-md p-1.5 shadow-2xl shadow-black/90 z-50 flex flex-col gap-1",
+                      lang === "DZ" ? "right-0" : "left-0",
+                    )}
                   >
                     {LANGUAGES.map(({ code, label, shortcut }) => (
                       <button
@@ -146,7 +148,7 @@ const Navbar = ({ lang, setLang, onOpenCommand }) => {
                         }}
                         type="button"
                         className={cn(
-                          "w-full flex items-center justify-between gap-3 px-2.5 py-1.5 text-xs rounded-lg transition-colors cursor-pointer text-left",
+                          "w-full flex items-center justify-between gap-2.5 px-2.5 py-1.5 text-xs rounded-lg transition-colors cursor-pointer text-left",
                           lang === code
                             ? "bg-stone-900 text-white font-semibold"
                             : "text-stone-400 hover:text-stone-200 hover:bg-stone-900/50",
@@ -168,7 +170,7 @@ const Navbar = ({ lang, setLang, onOpenCommand }) => {
                         <div className="flex items-center gap-1.5">
                           <span
                             dir="ltr"
-                            className="hidden md:inline-block font-mono text-md px-1.5 py-0.5 bg-stone-900 border border-stone-800 text-stone-400 rounded mx-2"
+                            className="hidden md:inline-block font-mono text-[10px] px-1.5 py-0.5 bg-stone-900 border border-stone-800 text-stone-400 rounded"
                           >
                             {shortcut}
                           </span>
@@ -187,7 +189,7 @@ const Navbar = ({ lang, setLang, onOpenCommand }) => {
             <div className="h-3.5 w-px bg-stone-800 flex-shrink-0" />
 
             {/* 2. Navigation Links with ScrollSpy Indicator */}
-            <div className="flex items-center gap-1 sm:gap-2 text-[11px] sm:text-xs md:text-sm font-medium whitespace-nowrap">
+            <div className="flex items-center gap-0.5 sm:gap-1.5 md:gap-2 text-[10px] xs:text-[11px] sm:text-xs md:text-sm font-medium whitespace-nowrap">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.id;
 
@@ -197,7 +199,7 @@ const Navbar = ({ lang, setLang, onOpenCommand }) => {
                     href={link.href}
                     onClick={() => setActiveSection(link.id)}
                     className={cn(
-                      "relative px-2 sm:px-3 py-1 rounded-full transition-colors duration-200",
+                      "relative px-1.5 xs:px-2 sm:px-3 py-1 rounded-full transition-colors duration-200",
                       isActive
                         ? "text-white font-semibold"
                         : "text-stone-400 hover:text-stone-200",
@@ -220,11 +222,9 @@ const Navbar = ({ lang, setLang, onOpenCommand }) => {
               })}
             </div>
 
-            {/* Divider */}
-            <div className="h-3.5 w-px bg-stone-800 flex-shrink-0 hidden xs:block" />
-
-            {/* 3. Social Icons */}
-            <div className="flex items-center gap-2 text-sm sm:text-base text-stone-400 flex-shrink-0">
+            {/* 3. Social Icons (Desktop only to prevent mobile overflow) */}
+            <div className="hidden md:flex items-center gap-2 text-sm sm:text-base text-stone-400 flex-shrink-0">
+              <div className="h-3.5 w-px bg-stone-800 mr-1" />
               <a
                 href="https://github.com/Youcefxx70x"
                 target="_blank"
@@ -245,27 +245,26 @@ const Navbar = ({ lang, setLang, onOpenCommand }) => {
               </a>
             </div>
 
+            {/* 4. Cmd+K Trigger Badge (Desktop only) */}
+            <div className="hidden md:flex items-center flex-shrink-0">
+              <div className="h-3.5 w-px bg-stone-800 mr-2 ml-1" />
+              <button
+                onClick={onOpenCommand}
+                type="button"
+                aria-label="Open Command Menu (Ctrl+K)"
+                className="flex items-center gap-1 px-2 py-0.5 rounded-md border border-stone-800 bg-stone-900/80 text-[10px] text-stone-400 hover:text-stone-200 hover:border-stone-700 transition-all cursor-pointer font-mono"
+                title="Open Command Palette (Ctrl+K)"
+              >
+                <span className="text-xs" dir="ltr">
+                  <span className="text-xs text-cyan-400">⌘</span>K
+                </span>
+              </button>
+            </div>
+
             {/* Divider */}
             <div className="h-3.5 w-px bg-stone-800 flex-shrink-0" />
 
-            {/* 4. Cmd+K Trigger Badge */}
-            <button
-              onClick={onOpenCommand}
-              type="button"
-              aria-label="Open Command Menu (Ctrl+K)"
-              className="hidden sm:flex items-center gap-1 px-2 py-0.5 rounded-md border border-stone-800 bg-stone-900/80 text-[10px] text-stone-400 hover:text-stone-200 hover:border-stone-700 transition-all cursor-pointer font-mono"
-              title="Open Command Palette (Ctrl+K)"
-            >
-              <span className="text-xs" dir="ltr">
-                <span className="text-sm text-cyan-400">⌘ </span> +{" "}
-                <span className="text-sm text-cyan-400">K</span>
-              </span>
-            </button>
-
-            {/* Divider */}
-            <div className="h-3.5 w-px bg-stone-800 flex-shrink-0" />
-
-            {/* 5. Close Pill Button */}
+            {/* 5. Close Pill Button (Always visible and within screen) */}
             <button
               onClick={() => {
                 setIsOpen(false);
@@ -273,11 +272,14 @@ const Navbar = ({ lang, setLang, onOpenCommand }) => {
               }}
               type="button"
               aria-label="Collapse navigation bar"
-              className="p-1 text-xs text-stone-400 hover:text-white hover:scale-110 transition-all cursor-pointer rounded-full"
+              className="p-1 text-xs text-stone-400 hover:text-white hover:scale-110 transition-all cursor-pointer rounded-full flex-shrink-0"
               title="Close navigation bar"
             >
               <BiArrowToRight
-                className={cn("w-5 h-5", lang === "DZ" && "rotate-180")}
+                className={cn(
+                  "w-4 h-4 sm:w-5 sm:h-5",
+                  lang === "DZ" && "rotate-180",
+                )}
               />
             </button>
           </motion.nav>
@@ -285,15 +287,14 @@ const Navbar = ({ lang, setLang, onOpenCommand }) => {
           /* COLLAPSED MINI TRIGGER PILL */
           <motion.button
             key="collapsed-navbar"
-            layout
             initial={{ opacity: 0, y: -20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.9 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
             onClick={() => setIsOpen(true)}
             type="button"
             aria-label="Open navigation bar"
-            className="pointer-events-auto flex items-center gap-2.5 rounded-full border border-stone-800/90 bg-neutral-950/90 px-4 py-2 text-xs font-medium text-stone-300 backdrop-blur-md shadow-2xl shadow-black/90 hover:border-stone-700 hover:bg-neutral-900/90 hover:text-white transition-all cursor-pointer group"
+            className="pointer-events-auto flex items-center gap-2 rounded-full border border-stone-800/90 bg-neutral-950/90 px-3.5 py-1.5 text-xs font-medium text-stone-300 backdrop-blur-md shadow-2xl shadow-black/90 hover:border-stone-700 hover:bg-neutral-900/90 hover:text-white transition-all cursor-pointer group"
           >
             <FaBars className="text-stone-400 group-hover:text-white transition-colors" />
             <span className="text-[11px] sm:text-xs">Menu</span>

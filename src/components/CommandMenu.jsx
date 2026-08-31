@@ -307,23 +307,27 @@ const CommandMenu = ({ isOpen, onClose, lang, setLang }) => {
                         />
                         <span className="truncate">{item.title}</span>
                       </div>
-                      <span
-                        className="text-md text-stone-600 uppercase tracking-wider font-mono"
-                        dir="ltr"
-                      >
-                        {command && command.toUpperCase()}
-                      </span>
-                      <span className="text-[10px] text-stone-600 uppercase tracking-wider font-mono">
-                        {item.group}
-                      </span>
+                      <div className="flex items-center gap-2 flex-shrink-0">
+                        {command && (
+                          <span
+                            className="hidden md:inline-block font-mono text-[10px] text-stone-400 px-1.5 py-0.5 rounded bg-stone-900 border border-stone-800"
+                            dir="ltr"
+                          >
+                            {command.toUpperCase()}
+                          </span>
+                        )}
+                        <span className="text-[10px] text-stone-600 uppercase tracking-wider font-mono">
+                          {item.group}
+                        </span>
+                      </div>
                     </button>
                   );
                 })
               )}
             </div>
 
-            {/* Modal Footer Key Hints */}
-            <div className="flex items-center justify-between px-3 py-2 border-t border-stone-900/80 text-[11px] text-stone-500 font-mono">
+            {/* Modal Footer Key Hints (Desktop/Tablet only) */}
+            <div className="hidden sm:flex items-center justify-between px-3 py-2 border-t border-stone-900/80 text-[11px] text-stone-500 font-mono">
               <div className="flex items-center gap-2">
                 <span className="px-1.5 py-0.5 rounded bg-stone-900 border border-stone-800">
                   ↑↓
