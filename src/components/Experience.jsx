@@ -6,7 +6,7 @@ const Experience = ({ lang }) => {
   const { cursusHeading, EXPERIENCES } = getContent(lang);
 
   return (
-    <div className="pb-4">
+    <section id="experience" className="pb-4 scroll-mt-28">
       <motion.h2
         className="my-20 text-center text-4xl font-bold"
         whileInView={{ opacity: 1, y: 0 }}
@@ -17,7 +17,10 @@ const Experience = ({ lang }) => {
       </motion.h2>
 
       {EXPERIENCES.map((exp) => (
-        <div className="mb-8 flex flex-wrap lg:justify-center" key={exp.year + exp.role}>
+        <div
+          className="mb-8 flex flex-wrap lg:justify-center"
+          key={exp.year + exp.role}
+        >
           {/* Year */}
           <motion.div
             className="w-full lg:w-1/4"
@@ -60,7 +63,7 @@ const Experience = ({ lang }) => {
           </motion.div>
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 

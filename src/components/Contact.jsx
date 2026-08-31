@@ -30,7 +30,10 @@ const Contact = ({ lang }) => {
 
   return (
     <TooltipProvider delayDuration={150}>
-      <section className="border-t border-stone-900 pb-24 pt-16">
+      <section
+        id="contact"
+        className="border-t border-stone-900 pb-24 pt-16 scroll-mt-28"
+      >
         <motion.h2
           className="mb-12 text-center text-4xl font-bold tracking-tight"
           whileInView={{ opacity: 1, y: 0 }}

@@ -7,7 +7,7 @@ const Projects = ({ lang }) => {
   const { projectsHeading, PROJECTS } = getContent(lang);
 
   return (
-    <div className="pb-4">
+    <section id="projects" className="pb-4 scroll-mt-28">
       <motion.h2
         className="my-20 text-center text-4xl font-bold"
         whileInView={{ opacity: 1, y: 0 }}
@@ -86,7 +86,7 @@ const Projects = ({ lang }) => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

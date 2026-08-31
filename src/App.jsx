@@ -20,7 +20,7 @@ function App() {
       <div className="fixed inset-0 -z-10 h-full w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
 
       {/* Scrollable page content */}
-      <div className="mx-auto max-w-5xl px-6 overflow-x-hidden">
+      <div className="mx-auto max-w-5xl px-6 pt-20 sm:pt-24 overflow-x-hidden">
         <Navbar lang={lang} setLang={setLang} />
         <Hero lang={lang} />
         <Technologies lang={lang} />

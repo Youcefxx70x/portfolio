@@ -36,7 +36,7 @@ const Platforms = ({ lang }) => {
   const { platformsHeading, PLATFORMS } = getContent(lang);
 
   return (
-    <section className="pb-20 pt-8">
+    <section id="platforms" className="pb-20 pt-8 scroll-mt-28">
       <motion.h2
         className="my-16 text-center text-4xl font-bold tracking-tight"
         whileInView={{ opacity: 1, y: 0 }}
