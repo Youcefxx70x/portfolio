@@ -3,6 +3,7 @@ import Contact from "./components/Contact";
 import Experience from "./components/Experience";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Platforms from "./components/Platforms";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Technologies from "./components/Technologies";
@@ -24,6 +25,7 @@ function App() {
         <Hero lang={lang} />
         <Technologies lang={lang} />
         <Skills lang={lang} />
+        <Platforms lang={lang} />
         <Projects lang={lang} />
         <Experience lang={lang} />
         <Contact lang={lang} />

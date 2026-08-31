@@ -10,6 +10,7 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 import { getContent } from "../data/portfolioData";
+import { cn } from "../utils/helper";
 import {
   Tooltip,
   TooltipContent,
@@ -67,20 +68,30 @@ const Contact = ({ lang }) => {
               </span>
             </a>
 
-            {/* Email with Tooltip & 1-Click Copy */}
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <button
-                  onClick={handleCopyEmail}
-                  type="button"
-                  aria-label="Copy email address"
-                  className="w-full flex items-center justify-between gap-3.5 px-4 py-3 rounded-xl border border-stone-900 bg-stone-900/30 text-stone-300 hover:text-white hover:border-stone-700/80 hover:bg-stone-900/60 transition-all text-sm sm:text-base cursor-pointer group text-left"
-                >
-                  <div className="flex items-center gap-3.5 truncate">
-                    <FaEnvelope className="text-stone-400 group-hover:text-stone-200 transition-colors text-base flex-shrink-0" />
-                    <span className="truncate">{CONTACT.email}</span>
-                  </div>
-                  <span className="flex items-center gap-1.5 text-xs text-stone-400 group-hover:text-stone-200 flex-shrink-0 font-medium transition-colors">
+            {/* Email Row with direct mail redirect + copy button */}
+            <div
+              className={cn(
+                "flex items-center justify-between gap-3.5 px-4 py-3 rounded-xl border border-stone-900 bg-stone-900/30 text-stone-300 hover:border-stone-700/80 hover:bg-stone-900/60 transition-all text-sm sm:text-base group",
+                copied && "border-emerald-500/50",
+              )}
+            >
+              <a
+                href={`mailto:${CONTACT.email}?subject=Project%20Inquiry`}
+                className="flex items-center gap-3.5 truncate hover:text-white transition-colors"
+                title="Send an email"
+              >
+                <FaEnvelope className="text-stone-400 group-hover:text-stone-200 transition-colors text-base flex-shrink-0" />
+                <span className="truncate">{CONTACT.email}</span>
+              </a>
+
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <button
+                    onClick={handleCopyEmail}
+                    type="button"
+                    aria-label="Copy email address"
+                    className="flex items-center gap-1.5 text-xs text-stone-400 hover:text-stone-100 px-2 py-1 rounded-md hover:bg-stone-800 transition-colors cursor-pointer flex-shrink-0"
+                  >
                     {copied ? (
                       <>
                         <FaCheck className="text-emerald-400 text-xs" />
@@ -90,17 +101,19 @@ const Contact = ({ lang }) => {
                       </>
                     ) : (
                       <>
-                        <FaCopy className="text-xs opacity-70 group-hover:opacity-100" />
+                        <FaCopy className="text-xs opacity-70 hover:opacity-100" />
                         <span>Copy</span>
                       </>
                     )}
-                  </span>
-                </button>
-              </TooltipTrigger>
-              <TooltipContent side="top">
-                <p>{copied ? "Copied to clipboard!" : "Click to copy email"}</p>
-              </TooltipContent>
-            </Tooltip>
+                  </button>
+                </TooltipTrigger>
+                <TooltipContent side="top">
+                  <p>
+                    {copied ? "✓ Copied to clipboard!" : "Copy email address"}
+                  </p>
+                </TooltipContent>
+              </Tooltip>
+            </div>
           </div>
 
           {/* Download Resume Action */}

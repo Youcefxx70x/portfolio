@@ -26,11 +26,55 @@ const PORTFOLIO_DATA = {
     name: "Youcef Habib Ouahab",
     title: "Full-Stack Developer",
     technologiesHeading: "Technologies",
+    platformsHeading: "Platforms & Expertise",
     languagesHeading: "Languages",
     projectsHeading: "Projects",
     cursusHeading: "Cursus",
     getInTouch: "Get In Touch",
     downloadResume: "Download my Resume",
+
+    PLATFORMS: [
+      {
+        id: "web",
+        title: "Web Development",
+        description:
+          "High-performance, responsive, and SEO-optimized web applications crafted with modern component architectures.",
+        technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+      },
+      {
+        id: "mobile",
+        title: "Mobile Apps",
+        description:
+          "Cross-platform mobile applications delivering native performance and smooth user experiences on iOS & Android.",
+        technologies: ["React Native", "Expo", "NativeWind", "TypeScript"],
+      },
+      {
+        id: "backend",
+        title: "Backend & APIs",
+        description:
+          "Robust server architectures, secure RESTful APIs, database design, authentication systems, and caching.",
+        technologies: [
+          "Express.js",
+          "Django",
+          "Node.js",
+          "MongoDB",
+          "PostgreSQL",
+          "Redis",
+        ],
+      },
+      {
+        id: "desktop",
+        title: "Desktop & Tools",
+        description:
+          "Custom desktop utilities, browser extensions, task automation scripts, and image/data processing pipelines.",
+        technologies: [
+          "Electron",
+          "Browser Extensions",
+          "Data Processing",
+          "Automation",
+        ],
+      },
+    ],
 
     HERO_CONTENT: `Data Science Graduate and a full stack developer with a knack for crafting robust and scalable web and mobile applications.\n With 3 years of hands-on experience.`,
 
@@ -171,11 +215,55 @@ const PORTFOLIO_DATA = {
     name: "Youcef Habib Ouahab",
     title: "Développeur Full-Stack",
     technologiesHeading: "Technologies",
+    platformsHeading: "Plateformes & Domaines",
     languagesHeading: "Langues",
     projectsHeading: "Projets",
     cursusHeading: "Cursus",
     getInTouch: "Contactez-moi",
     downloadResume: "Télécharger mon CV",
+
+    PLATFORMS: [
+      {
+        id: "web",
+        title: "Applications Web",
+        description:
+          "Applications web performantes, réactives et optimisées pour le SEO avec des architectures modernes.",
+        technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+      },
+      {
+        id: "mobile",
+        title: "Applications Mobiles",
+        description:
+          "Applications mobiles multiplateformes offrant des performances natives et une expérience fluide sur iOS et Android.",
+        technologies: ["React Native", "Expo", "NativeWind", "TypeScript"],
+      },
+      {
+        id: "backend",
+        title: "Backend & APIs",
+        description:
+          "Architectures serveur évolutives, APIs REST sécurisées, modélisation de bases de données et systèmes de cache.",
+        technologies: [
+          "Express.js",
+          "Django",
+          "Node.js",
+          "MongoDB",
+          "PostgreSQL",
+          "Redis",
+        ],
+      },
+      {
+        id: "desktop",
+        title: "Desktop & Outils",
+        description:
+          "Outils de bureau personnalisés, extensions de navigateur, scripts d'automatisation et traitement d'images/données.",
+        technologies: [
+          "Python",
+          "Extensions Web",
+          "Traitement de données",
+          "Automatisation",
+        ],
+      },
+    ],
 
     HERO_CONTENT: `Titulaire d'un diplôme en Data Science et développeur full stack, je maîtrise l'art de créer des applications web et mobiles robustes et évolutives.\nFort de 3 ans d'expérience pratique.`,
 
@@ -316,11 +404,55 @@ const PORTFOLIO_DATA = {
     name: "يوسف حبيب وهاب",
     title: "مطور شامل",
     technologiesHeading: "التقنيات",
+    platformsHeading: "المنصات ومجالات العمل",
     languagesHeading: "لغات البرمجة",
     projectsHeading: "المشاريع",
     cursusHeading: "المسار الدراسي",
     getInTouch: "تواصل معي",
     downloadResume: "تحميل السيرة الذاتية",
+
+    PLATFORMS: [
+      {
+        id: "web",
+        title: "تطبيقات الويب",
+        description:
+          "تطبيقات ويب متجاوبة، عالية الأداء ومتوافقة مع محركات البحث مبنية بأحدث تقنيات الويب الحديثة.",
+        technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+      },
+      {
+        id: "mobile",
+        title: "تطبيقات الموبايل",
+        description:
+          "تطبيقات هواتف ذكية متعددة المنصات بأداء أصلي وسلاسة عالية لنظامي iOS و Android.",
+        technologies: ["React Native", "Expo", "NativeWind", "TypeScript"],
+      },
+      {
+        id: "backend",
+        title: "الواجهات الخلفية و APIs",
+        description:
+          "بنية سيرفرات قوية وقابلة للتوسع، واجهات برمجية آمنة، تصميم قواعد البيانات وأنظمة التخزين المؤقت.",
+        technologies: [
+          "Express.js",
+          "Django",
+          "Node.js",
+          "MongoDB",
+          "PostgreSQL",
+          "Redis",
+        ],
+      },
+      {
+        id: "desktop",
+        title: "تطبيقات سطح المكتب والأدوات",
+        description:
+          "برمجيات سطح المكتب، إضافات المتصفح، سكريبتات الأتمتة ومعالجة الصور والبيانات.",
+        technologies: [
+          "Python",
+          "إضافات المتصفح",
+          "معالجة البيانات",
+          "الأتمتة",
+        ],
+      },
+    ],
 
     HERO_CONTENT: `خريج علوم البيانات ومطور ويب شامل يمتلك مهارة في تصميم تطبيقات الويب والموبايل المتينة والقابلة للتوسع.\nمع 3 سنوات من الخبرة العملية.`,
 
