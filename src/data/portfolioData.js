@@ -1,5 +1,6 @@
 import project1 from "../assets/projects/project-1.webp";
 
+import afiyid from "../assets/my_assets/afiyid.png";
 import bookmarks from "../assets/my_assets/bookmarks.png";
 import ct from "../assets/my_assets/CTS.png";
 import game from "../assets/my_assets/game.png";
@@ -7,6 +8,18 @@ import extension from "../assets/my_assets/LT.png";
 import matchy from "../assets/my_assets/matchy.png";
 import mines from "../assets/my_assets/mines.png";
 import R_FB from "../assets/my_assets/R_FB.png";
+
+const freelanceStack = [
+  "JS",
+  "TS",
+  "Python",
+  "React.js",
+  "Next js",
+  "Tanstack Start",
+  "Express js",
+  "Expo React Native",
+  "Django Rest",
+];
 
 const PORTFOLIO_DATA = {
   GB: {
@@ -23,19 +36,19 @@ const PORTFOLIO_DATA = {
 
     EXPERIENCES: [
       {
-        year: "2025",
+        year: "Nov 2025 - Present",
+        role: "Frontend Developer",
+        company: "Isybuild",
+        description:
+          "Full-time frontend developer building modern web applications using Next.js and TypeScript.",
+        technologies: ["Next.js", "TypeScript", "React", "Tailwind CSS"],
+      },
+      {
+        year: "2025 - Present",
         role: "Freelancer",
         company: "",
         description: "",
-        technologies: [
-          "Python",
-          "JS",
-          "TS",
-          "React.js",
-          "Django",
-          "Expo React Native",
-          "Django Rest",
-        ],
+        technologies: freelanceStack,
       },
       {
         year: "2023 - 2024",
@@ -68,6 +81,21 @@ const PORTFOLIO_DATA = {
     ],
 
     PROJECTS: [
+      {
+        title: "Afiyid",
+        link: "https://afiyid.com",
+        image: afiyid,
+        description:
+          "A modern full-stack web platform with an interactive dashboard, robust authentication, and scalable architecture.",
+        technologies: [
+          "Next.js 16",
+          "React",
+          "TypeScript",
+          "Express.js",
+          "MongoDB",
+          "Tailwind CSS",
+        ],
+      },
       {
         title: "Matchy",
         image: matchy,
@@ -153,19 +181,19 @@ const PORTFOLIO_DATA = {
 
     EXPERIENCES: [
       {
-        year: "2025",
+        year: "Nov 2025 - Présent",
+        role: "Développeur Front-End",
+        company: "Isybuild",
+        description:
+          "Développeur front-end à temps plein concevant des applications web modernes avec Next.js et TypeScript.",
+        technologies: ["Next.js", "TypeScript", "React", "Tailwind CSS"],
+      },
+      {
+        year: "2025  - Présent",
         role: "Freelance",
         company: "",
         description: "",
-        technologies: [
-          "Python",
-          "JS",
-          "TS",
-          "React.js",
-          "Django",
-          "Expo React Native",
-          "Django Rest",
-        ],
+        technologies: freelanceStack,
       },
       {
         year: "2023 - 2024",
@@ -198,6 +226,21 @@ const PORTFOLIO_DATA = {
     ],
 
     PROJECTS: [
+      {
+        title: "Afiyid",
+        link: "https://afiyid.com",
+        image: afiyid,
+        description:
+          "Plateforme web full-stack moderne dotée d'un tableau de bord interactif, d'une authentification sécurisée et d'une architecture évolutive.",
+        technologies: [
+          "Next.js 16",
+          "React",
+          "TypeScript",
+          "Express.js",
+          "MongoDB",
+          "Tailwind CSS",
+        ],
+      },
       {
         title: "Matchy",
         image: matchy,
@@ -283,19 +326,19 @@ const PORTFOLIO_DATA = {
 
     EXPERIENCES: [
       {
-        year: "2025",
+        year: "نوفمبر 2025 - حتى الآن",
+        role: "مطور واجهات أمامية",
+        company: "Isybuild",
+        description:
+          "مطور واجهات أمامية بدوام كامل لتطوير تطبيقات ويب حديثة باستخدام Next.js و TypeScript.",
+        technologies: ["Next.js", "TypeScript", "React", "Tailwind CSS"],
+      },
+      {
+        year: "2025 - حتى الآن",
         role: "مستقل",
         company: "",
         description: "",
-        technologies: [
-          "Python",
-          "JS",
-          "TS",
-          "React.js",
-          "Django",
-          "Expo React Native",
-          "Django Rest",
-        ],
+        technologies: freelanceStack,
       },
       {
         year: "2023 - 2024",
@@ -328,6 +371,21 @@ const PORTFOLIO_DATA = {
     ],
 
     PROJECTS: [
+      {
+        title: "Afiyid",
+        link: "https://afiyid.com",
+        image: afiyid,
+        description:
+          "منصة ويب شاملة (Full-Stack) حديثة تتضمن لوحة تحكم تفاعلية، نظام مصادقة آمن، وبنية برمجية قابلة للتوسع.",
+        technologies: [
+          "Next.js 16",
+          "React",
+          "TypeScript",
+          "Express.js",
+          "MongoDB",
+          "Tailwind CSS",
+        ],
+      },
       {
         title: "ماتشي",
         image: matchy,

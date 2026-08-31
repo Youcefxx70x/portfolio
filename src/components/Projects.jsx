@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import { getContent } from "../data/portfolioData";
 
 const Projects = ({ lang }) => {
@@ -18,20 +19,35 @@ const Projects = ({ lang }) => {
 
       <div>
         {PROJECTS.map((item) => (
-          <div key={item.title} className="mb-8 flex flex-wrap lg:justify-center">
+          <div
+            key={item.title}
+            className="mb-8 flex flex-wrap lg:justify-center"
+          >
             <motion.div
               className="w-full lg:w-1/4"
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 1 }}
             >
-              <img
-                src={item.image}
-                width={250}
-                height={250}
-                alt={item.title}
-                className="mb-2 rounded-lg bg-stone-950"
-              />
+              {item.link ? (
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={item.image}
+                    width={250}
+                    height={250}
+                    alt={item.title}
+                    className="mb-2 rounded-lg bg-stone-950 hover:opacity-80 transition-opacity cursor-pointer"
+                  />
+                </a>
+              ) : (
+                <img
+                  src={item.image}
+                  width={250}
+                  height={250}
+                  alt={item.title}
+                  className="mb-2 rounded-lg bg-stone-950"
+                />
+              )}
             </motion.div>
 
             <motion.div
@@ -40,7 +56,21 @@ const Projects = ({ lang }) => {
               initial={{ opacity: 0, x: 100 }}
               transition={{ duration: 1 }}
             >
-              <h3 className="font-semibold mb-2 text-2xl">{item.title}</h3>
+              <h3 className="font-semibold mb-2 text-2xl flex items-center gap-2">
+                {item.link ? (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-cyan-400 transition-colors inline-flex items-center gap-2"
+                  >
+                    {item.title}
+                    <FaExternalLinkAlt className="text-sm opacity-70" />
+                  </a>
+                ) : (
+                  item.title
+                )}
+              </h3>
               <p className="text-stone-400 mb-4">{item.description}</p>
               <div className="flex flex-wrap gap-2">
                 {item.technologies.map((tech) => (
