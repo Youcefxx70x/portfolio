@@ -3,15 +3,15 @@ import project1 from "../assets/projects/project-1.webp";
 //import project3 from "../assets/projects/project-3.webp";
 //import project4 from "../assets/projects/project-4.webp";
 
-import bookmarks from "../assets/my_assets/bookmarks.png"
-import ct from "../assets/my_assets/CTS.png"
-import extension from "../assets/my_assets/LT.png"
-import R_FB from "../assets/my_assets/R_FB.png"
-import mines from "../assets/my_assets/mines.png"
-import game from "../assets/my_assets/game.png"
-import matchy from "../assets/my_assets/matchy.png"
+import bookmarks from "../assets/my_assets/bookmarks.png";
+import ct from "../assets/my_assets/CTS.png";
+import game from "../assets/my_assets/game.png";
+import extension from "../assets/my_assets/LT.png";
+import matchy from "../assets/my_assets/matchy.png";
+import mines from "../assets/my_assets/mines.png";
+import R_FB from "../assets/my_assets/R_FB.png";
 
-export const HERO_CONTENT = `Data Science Graduate and a full stack developer with a knack for crafting robust and scalable web and mobile applications.\n With 3 years of hands-on experience, skillfull in front-end technologies like React js ,React Native ,Bootstrap and Tailwind css, as well as back-end technologies with Django and PostgreSQL.`;
+export const HERO_CONTENT = `Data Science Graduate and a full stack developer with a knack for crafting robust and scalable web and mobile applications.\n With 3 years of hands-on experience.`;
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
 
@@ -21,7 +21,15 @@ export const EXPERIENCES = [
     role: "Freelancer",
     company: "",
     description: ``,
-    technologies: ["Python","JS","TS", "React.js", "Django","Expo React Native","Django Rest"],
+    technologies: [
+      "Python",
+      "JS",
+      "TS",
+      "React.js",
+      "Django",
+      "Expo React Native",
+      "Django Rest",
+    ],
   },
   {
     year: "2023 - 2024",
@@ -59,8 +67,14 @@ export const PROJECTS = [
     image: matchy,
     description:
       "A masters graduation project and a startup..a mobile app dedicated to gamify learning, it's Duolingo but for algerian curiculum",
-    technologies: ["typescript","Expo", "react native", "nativewind" ,"drizzle", "supabase"],
-
+    technologies: [
+      "typescript",
+      "Expo",
+      "react native",
+      "nativewind",
+      "drizzle",
+      "supabase",
+    ],
   },
   {
     title: "Blood transmission platform and management system",
@@ -74,7 +88,7 @@ export const PROJECTS = [
     image: bookmarks,
     description:
       "An application inspired by antonio Mele's work ..it's purpose is to bookmark images online and directly share them in the profile block (emulating Pinterest)... it's a social media so there's also a tracking system for user actions",
-    technologies: ["HTML", "CSS", "Javascript", "Django","Redis"],
+    technologies: ["HTML", "CSS", "Javascript", "Django", "Redis"],
   },
   {
     title: "Links Tracker",
@@ -107,11 +121,9 @@ export const PROJECTS = [
   {
     title: "AlghistoryPedia",
     image: project1,
-    description:
-      "a mini encyclopedia dedicated for algerian history ",
-    technologies: ["HTML", "CSS", "javascript","Django"],
+    description: "a mini encyclopedia dedicated for algerian history ",
+    technologies: ["HTML", "CSS", "javascript", "Django"],
   },
-
 ];
 
 export const CONTACT = {
@@ -121,7 +133,6 @@ export const CONTACT = {
 };
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 export const var_fr = {
   name: "Youcef Habib Ouahab",
@@ -133,8 +144,8 @@ export const var_fr = {
   getInTouch: "Contactez-moi",
 
   HERO_CONTENT: `Titulaire d'un diplôme en Data Science et développeur full stack, je maîtrise l'art de créer des applications web et mobiles robustes et évolutives.
-Fort de 3 ans d'expérience pratique, j'ai perfectionné mes compétences en technologies front-end telles que React js, React Native, Bootstrap CSS et Tailwind CSS, ainsi qu'en technologies back-end avec Django et PostgreSQL.`,
-  
+Fort de 3 ans d'expérience pratique.`,
+
   ABOUT_TEXT: `Je suis un développeur full stack dévoué et polyvalent, passionné par la création d'applications web efficaces et conviviales. Avec 5 ans d'expérience professionnelle, j'ai travaillé avec une variété de technologies, notamment React, Next.js, Node.js, MySQL, PostgreSQL et MongoDB. Mon parcours dans le développement web a débuté par une profonde curiosité sur le fonctionnement des choses, et s'est transformé en une carrière où je m'efforce continuellement d'apprendre et de m'adapter aux nouveaux défis. J'excelle dans les environnements collaboratifs et j'aime résoudre des problèmes complexes pour fournir des solutions de haute qualité. En dehors du codage, j'aime rester actif, explorer de nouvelles technologies et contribuer à des projets open-source.`,
 
   EXPERIENCES: [
@@ -143,7 +154,15 @@ Fort de 3 ans d'expérience pratique, j'ai perfectionné mes compétences en tec
       role: "Freelance",
       company: "",
       description: "",
-      technologies: ["Python", "JS", "TS", "React.js", "Django", "Expo React Native", "Django Rest"],
+      technologies: [
+        "Python",
+        "JS",
+        "TS",
+        "React.js",
+        "Django",
+        "Expo React Native",
+        "Django Rest",
+      ],
     },
     {
       year: "2023 - 2024",
@@ -179,44 +198,57 @@ Fort de 3 ans d'expérience pratique, j'ai perfectionné mes compétences en tec
     {
       title: "Matchy",
       image: matchy,
-      description: 
+      description:
         "Un projet de fin d'études de master et une startup... une application mobile qui rend l'apprentissage ludique, c’est comme Duolingo mais pour le programme scolaire algérien",
-      technologies: ["TypeScript", "Expo", "React Native", "NativeWind", "Drizzle", "Supabase"]
+      technologies: [
+        "TypeScript",
+        "Expo",
+        "React Native",
+        "NativeWind",
+        "Drizzle",
+        "Supabase",
+      ],
     },
     {
       title: "Plateforme de transmission sanguine et système de gestion",
       image: ct,
-      description: "Projet de fin de licence... une plateforme entièrement fonctionnelle avec des fonctionnalités CRUD et une authentification utilisateur.",
+      description:
+        "Projet de fin de licence... une plateforme entièrement fonctionnelle avec des fonctionnalités CRUD et une authentification utilisateur.",
       technologies: ["HTML", "CSS", "Bootstrap", "Javascript", "Laravel"],
     },
     {
       title: "Plateforme de médias sociaux",
       image: bookmarks,
-      description: "Une application inspirée par le travail d'Antonio Mele... Son objectif est de sauvegarder des images en ligne et de les partager directement dans le bloc de profil (imitant Pinterest)... c'est un réseau social, donc il intègre également un système de suivi des actions des utilisateurs.",
+      description:
+        "Une application inspirée par le travail d'Antonio Mele... Son objectif est de sauvegarder des images en ligne et de les partager directement dans le bloc de profil (imitant Pinterest)... c'est un réseau social, donc il intègre également un système de suivi des actions des utilisateurs.",
       technologies: ["HTML", "CSS", "Javascript", "Django", "Redis"],
     },
     {
       title: "Suivi des liens",
       image: extension,
-      description: "Une extension de navigateur permettant de sauvegarder les liens favoris des utilisateurs dans le stockage local du navigateur en un clic.",
+      description:
+        "Une extension de navigateur permettant de sauvegarder les liens favoris des utilisateurs dans le stockage local du navigateur en un clic.",
       technologies: ["HTML", "CSS", "javascript"],
     },
     {
       title: "Mini Réseau Social React-Firebase",
       image: R_FB,
-      description: "Comme son nom l'indique, c'est ma première application React... qui gère les opérations CRUD et l'authentification avec Firebase.",
+      description:
+        "Comme son nom l'indique, c'est ma première application React... qui gère les opérations CRUD et l'authentification avec Firebase.",
       technologies: ["HTML", "CSS", "Typescript", "React", "Firebase"],
     },
     {
       title: "Jeu de mémoire mobile et web",
       image: game,
-      description: "Projet hobby en React et React Native, un jeu de mémoire entièrement fonctionnel qui récupère des emojis depuis une API selon la sélection de l'utilisateur... décode, randomise et les duplique en grilles.",
+      description:
+        "Projet hobby en React et React Native, un jeu de mémoire entièrement fonctionnel qui récupère des emojis depuis une API selon la sélection de l'utilisateur... décode, randomise et les duplique en grilles.",
       technologies: ["HTML", "CSS", "React", "React Native"],
     },
     {
       title: "Jeu Démineur",
       image: mines,
-      description: "Un autre projet de passionné en JavaScript pur qui émule le classique jeu Démineur.",
+      description:
+        "Un autre projet de passionné en JavaScript pur qui émule le classique jeu Démineur.",
       technologies: ["HTML", "CSS", "javascript"],
     },
     {
@@ -244,7 +276,7 @@ export const var_ar = {
   getInTouch: "تواصل معي",
 
   HERO_CONTENT: `خريج علوم البيانات ومطور ويب شامل يمتلك مهارة في تصميم تطبيقات الويب والموبايل المتينة والقابلة للتوسع.
-مع 3 سنوات من الخبرة العملية، طورت مهاراتي في تقنيات الواجهة الأمامية مثل React js، React Native، Bootstrap CSS وTailwind CSS، بالإضافة إلى تقنيات الواجهة الخلفية باستخدام Django و PostgreSQL.`,
+مع 3 سنوات من الخبرة العملية .`,
 
   ABOUT_TEXT: `أنا مطور شامل مخلص ومتعدد المواهب، شغوف بإنشاء تطبيقات ويب فعالة وسهلة الاستخدام. بخبرة مهنية تمتد لخمسة أعوام، عملت مع مجموعة متنوعة من التقنيات بما في ذلك React, Next.js, Node.js, MySQL, PostgreSQL وMongoDB. بدأت رحلتي في تطوير الويب بدافع الفضول العميق لمعرفة كيفية عمل الأشياء، وتطورت لتصبح مسيرة مهنية أسعى من خلالها دائماً لتعلم كل جديد والتكيف مع التحديات. أزدهر في البيئات التعاونية وأستمتع بحل المشكلات المعقدة لتقديم حلول عالية الجودة. خارج إطار البرمجة، أستمتع بممارسة النشاط، استكشاف تقنيات جديدة والمساهمة في مشاريع المصادر المفتوحة.`,
 
@@ -254,7 +286,15 @@ export const var_ar = {
       role: "مستقل",
       company: "",
       description: "",
-      technologies: ["Python", "JS", "TS", "React.js", "Django", "Expo React Native", "Django Rest"],
+      technologies: [
+        "Python",
+        "JS",
+        "TS",
+        "React.js",
+        "Django",
+        "Expo React Native",
+        "Django Rest",
+      ],
     },
     {
       year: "2023 - 2024",
@@ -294,42 +334,55 @@ export const var_ar = {
       مشروع تخرج ماجستير وستارت آب.. تطبيق موبايل يهدف إلى تحويل التعلم إلى لعبة، هو مثل دوولينجو لكن للمنهج الجزائري
 
       `,
-       technologies: ["TypeScript", "Expo", "React Native", "NativeWind", "Drizzle", "Supabase"]
-  },
+      technologies: [
+        "TypeScript",
+        "Expo",
+        "React Native",
+        "NativeWind",
+        "Drizzle",
+        "Supabase",
+      ],
+    },
     {
       title: "منصة نقل الدم ونظام الإدارة",
       image: ct,
-      description: "مشروع تخرج ليسانس.. منصة متكاملة تعمل بكامل وظائف CRUD وتحقق المستخدم.",
+      description:
+        "مشروع تخرج ليسانس.. منصة متكاملة تعمل بكامل وظائف CRUD وتحقق المستخدم.",
       technologies: ["HTML", "CSS", "Bootstrap", "Javascript", "Laravel"],
     },
     {
       title: "منصة وسائل التواصل الاجتماعي",
       image: bookmarks,
-      description: "تطبيق مستوحى من عمل أنطونيو ميلي... هدفه هو حفظ الصور عبر الإنترنت ومشاركتها مباشرة في قسم الملف الشخصي (محاكياً Pinterest)... إنه موقع تواصل اجتماعي ويضم أيضاً نظام تتبع لإجراءات المستخدمين.",
+      description:
+        "تطبيق مستوحى من عمل أنطونيو ميلي... هدفه هو حفظ الصور عبر الإنترنت ومشاركتها مباشرة في قسم الملف الشخصي (محاكياً Pinterest)... إنه موقع تواصل اجتماعي ويضم أيضاً نظام تتبع لإجراءات المستخدمين.",
       technologies: ["HTML", "CSS", "Javascript", "Django", "Redis"],
     },
     {
       title: "متعقب الروابط",
       image: extension,
-      description: "إضافة للمتصفح لحفظ الروابط المفضلة للمستخدمين في ذاكرة التخزين المحلية للمتصفح بنقرة زر.",
+      description:
+        "إضافة للمتصفح لحفظ الروابط المفضلة للمستخدمين في ذاكرة التخزين المحلية للمتصفح بنقرة زر.",
       technologies: ["HTML", "CSS", "javascript"],
     },
     {
       title: "شبكة اجتماعية مصغرة بReact وFirebase",
       image: R_FB,
-      description: "كما يشير الاسم، هذه هي أول تطبيق React لي... يقوم بعمليات CRUD والمصادقة باستخدام Firebase.",
+      description:
+        "كما يشير الاسم، هذه هي أول تطبيق React لي... يقوم بعمليات CRUD والمصادقة باستخدام Firebase.",
       technologies: ["HTML", "CSS", "Typescript", "React", "Firebase"],
     },
     {
       title: "لعبة الذاكرة للموبايل والويب",
       image: game,
-      description: "مشروع هواية باستخدام React وReact Native، لعبة ذاكرة متكاملة تحصل على الرموز التعبيرية من API بناءً على اختيار المستخدم... تقوم بفك التشفير، الترتيب العشوائي وتكرارها في شبكة.",
+      description:
+        "مشروع هواية باستخدام React وReact Native، لعبة ذاكرة متكاملة تحصل على الرموز التعبيرية من API بناءً على اختيار المستخدم... تقوم بفك التشفير، الترتيب العشوائي وتكرارها في شبكة.",
       technologies: ["HTML", "CSS", "React", "React Native"],
     },
     {
       title: "لعبة الباحث عن الألغام",
       image: mines,
-      description: "مشروع هواية آخر بلغة جافاسكريبت العادية يحاكي لعبة الباحث عن الألغام الكلاسيكية.",
+      description:
+        "مشروع هواية آخر بلغة جافاسكريبت العادية يحاكي لعبة الباحث عن الألغام الكلاسيكية.",
       technologies: ["HTML", "CSS", "javascript"],
     },
     {
@@ -345,6 +398,4 @@ export const var_ar = {
     phoneNo: "+213-560879734",
     email: "youcef.h.ouahab@gmail.com",
   },
-
-
 };
