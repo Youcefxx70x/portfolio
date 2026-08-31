@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import profile2 from "../assets/p2.webp";
 import { getContent } from "../data/portfolioData";
+import LocalTime from "./LocalTime";
 
 const containerVariants = {
   hidden: { opacity: 0, y: -50 },
@@ -48,6 +49,11 @@ const Hero = ({ lang }) => {
             animate="visible"
             variants={containerVariants}
           >
+            {/* Live Local Time Badge */}
+            <motion.div variants={childVariants} className="mb-3">
+              <LocalTime lang={lang} />
+            </motion.div>
+
             <motion.h1
               className={`pb-2 text-4xl sm:text-6xl lg:text-7xl font-bold ${
                 isRTL ? "tracking-normal leading-tight" : "tracking-tighter"

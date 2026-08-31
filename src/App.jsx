@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useHotkey } from "@tanstack/react-hotkeys";
+import { useEffect, useState } from "react";
+import CommandMenu from "./components/CommandMenu";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
 import Footer from "./components/Footer";
@@ -11,6 +13,24 @@ import Technologies from "./components/Technologies";
 
 function App() {
   const [lang, setLang] = useState("GB");
+  const [isCommandOpen, setIsCommandOpen] = useState(false);
+
+  useHotkey("Mod+E", () => setLang("GB"), {});
+  useHotkey("Mod+A", () => setLang("DZ"), {});
+  useHotkey("Mod+F", () => setLang("FR"), {});
+
+  // Global Ctrl+K / Cmd+K shortcut
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        setIsCommandOpen((prev) => !prev);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   return (
     <div
@@ -22,7 +42,11 @@ function App() {
 
       {/* Scrollable page content */}
       <div className="mx-auto max-w-5xl px-6 pt-20 sm:pt-24 overflow-x-hidden">
-        <Navbar lang={lang} setLang={setLang} />
+        <Navbar
+          lang={lang}
+          setLang={setLang}
+          onOpenCommand={() => setIsCommandOpen(true)}
+        />
         <Hero lang={lang} />
         <Technologies lang={lang} />
         <Skills lang={lang} />
@@ -32,6 +56,14 @@ function App() {
         <Contact lang={lang} />
         <Footer />
       </div>
+
+      {/* Global Cmd+K Command Palette */}
+      <CommandMenu
+        isOpen={isCommandOpen}
+        onClose={() => setIsCommandOpen(false)}
+        lang={lang}
+        setLang={setLang}
+      />
     </div>
   );
 }

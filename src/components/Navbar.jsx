@@ -3,18 +3,24 @@ import PropTypes from "prop-types";
 import { useEffect, useRef, useState } from "react";
 import ReactCountryFlag from "react-country-flag";
 import { BiArrowToRight } from "react-icons/bi";
-import { FaBars, FaCheck, FaChevronDown, FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaBars,
+  FaCheck,
+  FaChevronDown,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
 import { cn } from "../utils/helper";
 
 const LANGUAGES = [
-  { code: "GB", label: "English" },
-  { code: "FR", label: "Français" },
-  { code: "DZ", label: "العربية" },
+  { code: "GB", label: "English", shortcut: "⌘+E" },
+  { code: "FR", label: "Français", shortcut: "⌘+F" },
+  { code: "DZ", label: "العربية", shortcut: "⌘+A" },
 ];
 
 const SECTION_IDS = ["platforms", "projects", "experience", "contact"];
 
-const Navbar = ({ lang, setLang }) => {
+const Navbar = ({ lang, setLang, onOpenCommand }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
@@ -116,7 +122,7 @@ const Navbar = ({ lang, setLang }) => {
                 <FaChevronDown
                   className={cn(
                     "text-[8px] text-stone-400 transition-transform duration-200",
-                    isLangOpen && "rotate-180"
+                    isLangOpen && "rotate-180",
                   )}
                 />
               </button>
@@ -131,7 +137,7 @@ const Navbar = ({ lang, setLang }) => {
                     transition={{ duration: 0.15, ease: "easeOut" }}
                     className="absolute top-full mt-2 left-0 min-w-[120px] rounded-xl border border-stone-800/90 bg-neutral-950/95 backdrop-blur-md p-1.5 shadow-2xl shadow-black/90 z-50 flex flex-col gap-1"
                   >
-                    {LANGUAGES.map(({ code, label }) => (
+                    {LANGUAGES.map(({ code, label, shortcut }) => (
                       <button
                         key={code}
                         onClick={() => {
@@ -140,10 +146,10 @@ const Navbar = ({ lang, setLang }) => {
                         }}
                         type="button"
                         className={cn(
-                          "w-full flex items-center justify-between gap-2.5 px-2.5 py-1.5 text-xs rounded-lg transition-colors cursor-pointer text-left",
+                          "w-full flex items-center justify-between gap-3 px-2.5 py-1.5 text-xs rounded-lg transition-colors cursor-pointer text-left",
                           lang === code
                             ? "bg-stone-900 text-white font-semibold"
-                            : "text-stone-400 hover:text-stone-200 hover:bg-stone-900/50"
+                            : "text-stone-400 hover:text-stone-200 hover:bg-stone-900/50",
                         )}
                       >
                         <div className="flex items-center gap-2">
@@ -159,9 +165,17 @@ const Navbar = ({ lang, setLang }) => {
                           />
                           <span>{label}</span>
                         </div>
-                        {lang === code && (
-                          <FaCheck className="text-[10px] text-emerald-400" />
-                        )}
+                        <div className="flex items-center gap-1.5">
+                          <span
+                            dir="ltr"
+                            className="hidden md:inline-block font-mono text-md px-1.5 py-0.5 bg-stone-900 border border-stone-800 text-stone-400 rounded mx-2"
+                          >
+                            {shortcut}
+                          </span>
+                          {lang === code && (
+                            <FaCheck className="text-[10px] text-emerald-400 flex-shrink-0" />
+                          )}
+                        </div>
                       </button>
                     ))}
                   </motion.div>
@@ -186,14 +200,18 @@ const Navbar = ({ lang, setLang }) => {
                       "relative px-2 sm:px-3 py-1 rounded-full transition-colors duration-200",
                       isActive
                         ? "text-white font-semibold"
-                        : "text-stone-400 hover:text-stone-200"
+                        : "text-stone-400 hover:text-stone-200",
                     )}
                   >
                     {isActive && (
                       <motion.span
                         layoutId="activeNavPill"
                         className="absolute inset-0 rounded-full bg-stone-800/80 -z-10 border border-stone-700/60"
-                        transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 350,
+                          damping: 30,
+                        }}
                       />
                     )}
                     {link.label}
@@ -230,7 +248,24 @@ const Navbar = ({ lang, setLang }) => {
             {/* Divider */}
             <div className="h-3.5 w-px bg-stone-800 flex-shrink-0" />
 
-            {/* 4. Close Pill Button */}
+            {/* 4. Cmd+K Trigger Badge */}
+            <button
+              onClick={onOpenCommand}
+              type="button"
+              aria-label="Open Command Menu (Ctrl+K)"
+              className="hidden sm:flex items-center gap-1 px-2 py-0.5 rounded-md border border-stone-800 bg-stone-900/80 text-[10px] text-stone-400 hover:text-stone-200 hover:border-stone-700 transition-all cursor-pointer font-mono"
+              title="Open Command Palette (Ctrl+K)"
+            >
+              <span className="text-xs" dir="ltr">
+                <span className="text-sm text-cyan-400">⌘ </span> +{" "}
+                <span className="text-sm text-cyan-400">K</span>
+              </span>
+            </button>
+
+            {/* Divider */}
+            <div className="h-3.5 w-px bg-stone-800 flex-shrink-0" />
+
+            {/* 5. Close Pill Button */}
             <button
               onClick={() => {
                 setIsOpen(false);
@@ -282,6 +317,7 @@ const Navbar = ({ lang, setLang }) => {
 Navbar.propTypes = {
   lang: PropTypes.string.isRequired,
   setLang: PropTypes.func.isRequired,
+  onOpenCommand: PropTypes.func,
 };
 
 export default Navbar;
