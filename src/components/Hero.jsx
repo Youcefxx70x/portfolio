@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
-import profile2 from "../assets/p2.png";
+import profile2 from "../assets/p2.webp";
 import { getContent } from "../data/portfolioData";
 
 const containerVariants = {
@@ -40,7 +40,9 @@ const Hero = ({ lang }) => {
         <div className="w-full lg:w-1/2 px-2 sm:px-6 lg:px-8">
           <motion.div
             className={`flex flex-col items-center mt-6 lg:mt-0 ${
-              isRTL ? "lg:items-start lg:text-start" : "lg:items-start lg:text-start"
+              isRTL
+                ? "lg:items-start lg:text-start"
+                : "lg:items-start lg:text-start"
             }`}
             initial="hidden"
             animate="visible"

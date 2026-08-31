@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Platforms from "./components/Platforms";
@@ -29,6 +30,7 @@ function App() {
         <Projects lang={lang} />
         <Experience lang={lang} />
         <Contact lang={lang} />
+        <Footer />
       </div>
     </div>
   );

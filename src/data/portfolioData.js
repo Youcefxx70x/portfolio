@@ -1,13 +1,13 @@
 import project1 from "../assets/projects/project-1.webp";
 
-import afiyid from "../assets/my_assets/afiyid.png";
-import bookmarks from "../assets/my_assets/bookmarks.png";
-import ct from "../assets/my_assets/CTS.png";
-import game from "../assets/my_assets/game.png";
-import extension from "../assets/my_assets/LT.png";
-import matchy from "../assets/my_assets/matchy.png";
-import mines from "../assets/my_assets/mines.png";
-import R_FB from "../assets/my_assets/R_FB.png";
+import afiyid from "../assets/my_assets/afiyid.webp";
+import bookmarks from "../assets/my_assets/bookmarks.webp";
+import ct from "../assets/my_assets/CTS.webp";
+import game from "../assets/my_assets/game.webp";
+import extension from "../assets/my_assets/LT.webp";
+import matchy from "../assets/my_assets/matchy.webp";
+import mines from "../assets/my_assets/mines.webp";
+import R_FB from "../assets/my_assets/R_FB.webp";
 
 const freelanceStack = [
   "JS",
